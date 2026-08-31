@@ -1,0 +1,19 @@
+{
+  "name": "Vergil333.MarrowNpcToolkit.Patch6.Editor",
+  "rootNamespace": "Vergil333.MarrowNpcToolkit.ProjectCompatibility",
+  "references": [
+    "Vergil333.MarrowNpcToolkit",
+    "Vergil333.MarrowNpcToolkit.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

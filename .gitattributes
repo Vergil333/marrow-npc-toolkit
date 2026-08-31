@@ -1,0 +1,6 @@
+# Unity serializes empty YAML values with a trailing space. Treat that canonical
+# editor output as data rather than a whitespace defect while retaining normal
+# whitespace checks for source and documentation.
+*.asset whitespace=-trailing-space
+*.meta whitespace=-trailing-space
+*.meta.txt whitespace=-trailing-space

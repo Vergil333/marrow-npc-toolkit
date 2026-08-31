@@ -1,0 +1,61 @@
+// Generated stub — declarations only, no behaviour.
+//
+// BONELAB binds this prefab component by the triple (Assembly-CSharp.dll,
+// SLZ.Bonelab, AgentLinkControl). The public Marrow SDK omits the type, so a
+// declaration has to exist here for Unity to author against; at runtime
+// the game's own class supplies the behaviour and Unity's typetree
+// remapping fills these fields by name.
+//
+// Field names come from a working NPC bundle's typetree. A field that is
+// missing here simply keeps the game class's default.
+
+namespace SLZ.Bonelab
+{
+    public class AgentLinkControl : UnityEngine.MonoBehaviour
+    {
+        public float totalMass;
+        public float jointForceMult;
+        public UnityEngine.AI.NavMeshAgent navAgent;
+        public SLZ.Marrow.AI.AIBrain brain;
+        public SLZ.Marrow.AI.TriggerRefProxy triggerProxy;
+        public SLZ.Marrow.PuppetMasta.BehaviourBaseNav baseBehaviour;
+        public PuppetMasta.BehaviourPowerLegs legBehaviour;
+        public UnityEngine.GameObject frozenCrabJumpTargetObj;
+        public SLZ.Marrow.PuppetMasta.PuppetMaster _puppet;
+        public int linkState;
+        public byte isOnLink;
+        public byte isZipping;
+        public float agentDot;
+        public float yDiff;
+        public UnityEngine.GameObject zipStick;
+        public UnityEngine.Rigidbody zipGripBody;
+        public UnityEngine.Object owner;
+        public float linkStartTime;
+        public float minLinkDupeDuration;
+        public UnityEngine.Rigidbody headRB;
+        public UnityEngine.Rigidbody chestRB;
+        public UnityEngine.Rigidbody leftHandRB;
+        public UnityEngine.Rigidbody leftElbowRB;
+        public UnityEngine.Rigidbody rightHandRB;
+        public UnityEngine.Rigidbody rightElbowRB;
+        public UnityEngine.Rigidbody leftFootRB;
+        public UnityEngine.Rigidbody leftKneeRB;
+        public UnityEngine.Rigidbody rightFootRB;
+        public UnityEngine.Rigidbody rightKneeRB;
+        public UnityEngine.Rigidbody[] allRBs;
+        public UnityEngine.ConfigurableJoint headJoint;
+        public UnityEngine.ConfigurableJoint chestJoint;
+        public UnityEngine.ConfigurableJoint leftElbowJoint;
+        public UnityEngine.ConfigurableJoint rightElbowJoint;
+        public UnityEngine.ConfigurableJoint leftHandJoint;
+        public UnityEngine.ConfigurableJoint rightHandJoint;
+        public UnityEngine.ConfigurableJoint leftKneeJoint;
+        public UnityEngine.ConfigurableJoint rightKneeJoint;
+        public UnityEngine.ConfigurableJoint leftFootJoint;
+        public UnityEngine.ConfigurableJoint rightFootJoint;
+        public SLZ.Marrow.AI.TriggerRefProxy playerProxy;
+        public UnityEngine.Vector3 initialPos;
+        public float sqrPos;
+        public float distTimer;
+    }
+}

@@ -1,0 +1,148 @@
+// GENERATED from a shipped bundle's typetree — declarations only, no behaviour.
+//
+// Do not hand-trim this. A field omitted here is absent from our serialized
+// data, so the game's class gets null instead of an empty collection, and the
+// first code to touch it throws. That is what a hand-written partial stub of
+// this class caused: 120 of 379 leaves present, and initialisation dying in a
+// different nested struct on every build.
+//
+// Regenerate: _pipeline/npc/stub_from_typetree.py <bundle> <monoscripts> EyeAndHeadAnimator <out.cs> RealisticEyeMovements
+
+using UnityEngine;
+using UnityEngine.AI;
+using SLZ.Marrow;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Mechanics;
+using SLZ.Marrow.Pool;
+using SLZ.Marrow.PuppetMasta;
+using SLZ.Marrow.Warehouse;
+
+namespace RealisticEyeMovements
+{
+    [System.Serializable]
+    public class ControlData
+    {
+        public int eyeControl;
+        public Transform leftEye;
+        public Transform rightEye;
+        public float maxEyeUpBoneAngle;
+        public float maxEyeDownBoneAngle;
+        public float maxEyeUpEyeballAngle;
+        public float maxEyeDownEyeballAngle;
+        public byte isEyeBallDefaultSet;
+        public byte isEyeBoneDefaultSet;
+        public byte isEyeBallLookUpSet;
+        public byte isEyeBoneLookUpSet;
+        public byte isEyeBallLookDownSet;
+        public byte isEyeBoneLookDownSet;
+        public EyeRotationLimiter leftBoneEyeRotationLimiter;
+        public EyeRotationLimiter rightBoneEyeRotationLimiter;
+        public EyeRotationLimiter leftEyeballEyeRotationLimiter;
+        public EyeRotationLimiter rightEyeballEyeRotationLimiter;
+        public int eyelidControl;
+        public int eyelidBoneMode;
+        public byte eyelidsFollowEyesVertically;
+        public Transform upperEyeLidLeft;
+        public Transform upperEyeLidRight;
+        public Transform lowerEyeLidLeft;
+        public Transform lowerEyeLidRight;
+        public byte isEyelidBonesDefaultSet;
+        public byte isEyelidBonesClosedSet;
+        public byte isEyelidBonesLookUpSet;
+        public byte isEyelidBonesLookDownSet;
+        public EyelidRotationLimiter upperLeftLimiter;
+        public EyelidRotationLimiter upperRightLimiter;
+        public EyelidRotationLimiter lowerLeftLimiter;
+        public EyelidRotationLimiter lowerRightLimiter;
+        public float eyeWidenOrSquint;
+        public EyelidPositionBlendshape[] blendshapesForBlinking;
+        public EyelidPositionBlendshape[] blendshapesForLookingUp;
+        public EyelidPositionBlendshape[] blendshapesForLookingDown;
+        public BlendshapesConfig[] blendshapesConfigs;
+        public byte isEyelidBlendshapeDefaultSet;
+        public byte isEyelidBlendshapeClosedSet;
+        public byte isEyelidBlendshapeLookUpSet;
+        public byte isEyelidBlendshapeLookDownSet;
+    }
+
+    [System.Serializable]
+    public class EyeRotationLimiter
+    {
+        public Transform transform;
+        public UnityEngine.Quaternion defaultQ;
+        public UnityEngine.Quaternion lookUpQ;
+        public UnityEngine.Quaternion lookDownQ;
+        public float maxUpAngle;
+        public float maxDownAngle;
+        public byte isLookUpSet;
+        public byte isLookDownSet;
+    }
+
+    [System.Serializable]
+    public class EyelidRotationLimiter
+    {
+        public Transform transform;
+        public UnityEngine.Quaternion defaultQ;
+        public UnityEngine.Quaternion closedQ;
+        public UnityEngine.Quaternion lookUpQ;
+        public UnityEngine.Quaternion lookDownQ;
+        public float eyeMaxDownAngle;
+        public float eyeMaxUpAngle;
+        public UnityEngine.Vector3 defaultPos;
+        public UnityEngine.Vector3 closedPos;
+        public UnityEngine.Vector3 lookUpPos;
+        public UnityEngine.Vector3 lookDownPos;
+        public byte isLookUpSet;
+        public byte isLookDownSet;
+        public byte isDefaultPosSet;
+        public byte isClosedPosSet;
+        public byte isLookUpPosSet;
+        public byte isLookDownPosSet;
+    }
+
+    [System.Serializable]
+    public class EyelidPositionBlendshape
+    {
+        public SkinnedMeshRenderer skinnedMeshRenderer;
+        public float defaultWeight;
+        public float positionWeight;
+        public int index;
+        public string name;
+        public byte isUsedInEalierConfig;
+    }
+
+    [System.Serializable]
+    public class BlendshapesConfig
+    {
+        public SkinnedMeshRenderer skinnedMeshRenderer;
+        public int blendShapeCount;
+        public string[] blendshapeNames;
+        public float[] blendshapeWeights;
+    }
+
+    public class EyeAndHeadAnimator : UnityEngine.MonoBehaviour
+    {
+        public float headSpeedModifier;
+        public float headWeight;
+        public Transform headBoneNonMecanimXform;
+        public byte useMicroSaccades;
+        public byte useMacroSaccades;
+        public byte useHeadJitter;
+        public byte kDrawSightlinesInEditor;
+        public byte areUpdatedControlledExternally;
+        public ControlData controlData;
+        public float kMinNextBlinkTime;
+        public float kMaxNextBlinkTime;
+        public float blinkSpeed;
+        public byte eyelidsFollowEyesVertically;
+        public float maxEyeHorizAngle;
+        public float maxEyeHorizAngleTowardsNose;
+        public float crossEyeCorrection;
+        public float nervousness;
+        public float limitHeadAngle;
+    }
+}

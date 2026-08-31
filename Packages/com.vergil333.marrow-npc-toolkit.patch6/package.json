@@ -1,0 +1,35 @@
+{
+  "name": "com.vergil333.marrow-npc-toolkit.patch6",
+  "version": "0.5.0-preview.1",
+  "displayName": "Marrow NPC Toolkit - BONELAB Patch 6 Provider",
+  "description": "Unofficial exact-schema native NPC provider for Marrow NPC Toolkit and BONELAB Patch 6.",
+  "unity": "2021.3",
+  "unityRelease": "16f1",
+  "dependencies": {
+    "com.vergil333.marrow-npc-toolkit": "0.5.0-preview.1",
+    "com.stresslevelzero.marrow.sdk": "1.2.0"
+  },
+  "keywords": [
+    "bonelab",
+    "marrow",
+    "npc",
+    "provider",
+    "patch6",
+    "editor"
+  ],
+  "author": {
+    "name": "Vergil333",
+    "url": "https://github.com/Vergil333"
+  },
+  "documentationUrl": "https://github.com/Vergil333/marrow-npc-toolkit/blob/main/Packages/com.vergil333.marrow-npc-toolkit.patch6/README.md",
+  "changelogUrl": "https://github.com/Vergil333/marrow-npc-toolkit/blob/main/Packages/com.vergil333.marrow-npc-toolkit.patch6/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Vergil333/marrow-npc-toolkit/blob/main/LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vergil333/marrow-npc-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vergil333/marrow-npc-toolkit/issues"
+  },
+  "hideInEditor": false
+}

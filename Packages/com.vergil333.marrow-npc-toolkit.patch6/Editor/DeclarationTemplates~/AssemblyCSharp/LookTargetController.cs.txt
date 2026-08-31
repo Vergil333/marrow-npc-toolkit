@@ -1,0 +1,42 @@
+// GENERATED from a shipped bundle's typetree — declarations only, no behaviour.
+//
+// Do not hand-trim this. A field omitted here is absent from our serialized
+// data, so the game's class gets null instead of an empty collection, and the
+// first code to touch it throws. That is what a hand-written partial stub of
+// this class caused: 120 of 379 leaves present, and initialisation dying in a
+// different nested struct on every build.
+//
+// Regenerate: _pipeline/npc/stub_from_typetree.py <bundle> <monoscripts> LookTargetController <out.cs> RealisticEyeMovements
+
+using UnityEngine;
+using UnityEngine.AI;
+using SLZ.Marrow;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Mechanics;
+using SLZ.Marrow.Pool;
+using SLZ.Marrow.PuppetMasta;
+using SLZ.Marrow.Warehouse;
+
+namespace RealisticEyeMovements
+{
+    public class LookTargetController : UnityEngine.MonoBehaviour
+    {
+        public Transform[] pointsOfInterest;
+        public float lookAtPlayerRatio;
+        public float stareBackFactor;
+        public float noticePlayerDistance;
+        public float personalSpaceDistance;
+        public float minLookTime;
+        public float maxLookTime;
+        public Transform thirdPersonPlayerEyeCenter;
+        public byte keepTargetEvenWhenLost;
+        public UnityEngine.Events.UnityEvent OnStartLookingAtPlayer;
+        public UnityEngine.Events.UnityEvent OnStopLookingAtPlayer;
+        public UnityEngine.Events.UnityEvent OnPlayerEntersPersonalSpace;
+        public UnityEngine.Events.UnityEvent OnLookAwayFromShyness;
+    }
+}

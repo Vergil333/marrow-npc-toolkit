@@ -1,0 +1,22 @@
+// GENERATED declaration for the BONELAB Patch 6 runtime component.
+// The shipped game supplies the pooled-delay implementation, including its
+// real SpawnEvents base class. The public SDK does not expose SpawnEvents, so
+// this authoring-only declaration intentionally flattens the base's serialized
+// _poolee field onto MonoBehaviour. BONELAB resolves the same Assembly-CSharp
+// type at runtime and supplies the real pooled callbacks.
+
+using UnityEngine;
+using UnityEngine.Events;
+using SLZ.Marrow.Pool;
+
+namespace SLZ.Utilities
+{
+    public class GenericSpawnDelayEvent : MonoBehaviour
+    {
+        [SerializeField]
+        protected Poolee _poolee;
+
+        public float secondsUntilEvent = 1f;
+        public UnityEvent delayedEvent = new UnityEvent();
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Vergil333.MarrowNpcToolkit",
+  "rootNamespace": "Vergil333.MarrowNpcToolkit",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

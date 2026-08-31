@@ -1,0 +1,333 @@
+// GENERATED from a shipped bundle's typetree — declarations only, no behaviour.
+//
+// Do not hand-trim this. A field omitted here is absent from our serialized
+// data, so the game's class gets null instead of an empty collection, and the
+// first code to touch it throws. That is what a hand-written partial stub of
+// this class caused: 120 of 379 leaves present, and initialisation dying in a
+// different nested struct on every build.
+//
+// Regenerate: _pipeline/npc/stub_from_typetree.py <bundle> <monoscripts> BehaviourPowerLegs <out.cs> PuppetMasta
+
+using UnityEngine;
+using UnityEngine.AI;
+using SLZ.Marrow;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Mechanics;
+using SLZ.Marrow.Pool;
+using SLZ.Marrow.PuppetMasta;
+using SLZ.Marrow.Warehouse;
+
+namespace PuppetMasta
+{
+    [System.Serializable]
+    public class SubBehaviourSensors
+    {
+        public UnityEngine.LayerMask blockVisionRaycast;
+        public float visionFov;
+        public MuscleCollisionBroadcasterSensor[] forceSensorsFeet;
+        public MuscleCollisionBroadcasterSensor[] forceSensorsHands;
+        public MuscleCollisionBroadcasterSensor[] forceSensorsBody;
+        public float additionalMass;
+        public float footSupported;
+        public float handSupported;
+        public float bodySupported;
+        public TriggerRefProxy target;
+        public TriggerRefProxy selfTrp;
+    }
+
+    [System.Serializable]
+    public class SubBehaviourSfx
+    {
+        public UnityEngine.AudioClip[] agro;
+        public UnityEngine.AudioClip[] unAgro;
+        public UnityEngine.AudioClip[] painSmall;
+        public UnityEngine.AudioClip[] painBig;
+        public UnityEngine.AudioClip[] death;
+        public UnityEngine.AudioClip[] jumpCharge;
+        public UnityEngine.AudioClip[] jump;
+        public UnityEngine.AudioClip[] smallEffort;
+        public UnityEngine.AudioClip[] mediumEffort;
+        public UnityEngine.AudioClip[] largeEffort;
+        public UnityEngine.AudioClip[] attack1;
+        public UnityEngine.AudioClip[] attackLand1;
+        public UnityEngine.AudioClip[] attack2;
+        public UnityEngine.AudioClip[] impactHead;
+        public UnityEngine.AudioClip[] impactSpine;
+        public UnityEngine.AudioClip[] impactLimb;
+        public UnityEngine.AudioClip dotLoop1;
+        public UnityEngine.AudioClip agroMovementLoop;
+        public UnityEngine.AudioClip movementLoop;
+        public float pitchMultiplier;
+        public AudioSource impactSource;
+    }
+
+    [System.Serializable]
+    public class SubBehaviourHealth
+    {
+        public float maxHitPoints;
+        public float maxAppendageHp;
+        public float stunRecovery;
+        public float maxStunSeconds;
+        public float minHeadImpact;
+        public float minSpineImpact;
+        public float minLimbImpact;
+        public byte isOrganic;
+        public byte stunActive;
+        public float bluntMult;
+        public float stabMult;
+        public float pierceMult;
+        public int[] muscles;
+        public float cur_hp;
+        public float cur_arm_lf;
+        public float cur_arm_rt;
+        public float cur_leg_lf;
+        public float cur_leg_rt;
+        public float stun_spine;
+        public float stun_arm_lf;
+        public float stun_arm_rt;
+        public float stun_leg_lf;
+        public float stun_leg_rt;
+        public float usage_hips;
+        public float usage_spine;
+        public float usage_arm_lf;
+        public float usage_arm_rt;
+        public float usage_leg_lf;
+        public float usage_leg_rt;
+        public float aggression;
+        public float irritability;
+        public float placability;
+        public float vengefulness;
+        public int damageScore;
+    }
+
+    [System.Serializable]
+    public class SubBehaviourIk
+    {
+        public byte footIkOn;
+        public IK[] footIkSolvers;
+        public Transform[] toeTrans;
+        public float curWeight;
+        public IK[] armIkSolvers;
+        public byte armIkActiveLf;
+        public byte armIkActiveRt;
+        public Transform lfHandTarget;
+        public Transform rtHandTarget;
+        public Transform lfHandAnim;
+        public Transform rtHandAnim;
+        public byte isHuman;
+        public Transform lfClav;
+        public Transform lfAc;
+        public Transform lfUpperTwist;
+        public Transform lfTwist;
+        public Transform lfWrist;
+        public Transform lfHand;
+        public Transform rtClav;
+        public Transform rtAc;
+        public Transform rtUpperTwist;
+        public Transform rtTwist;
+        public Transform rtWrist;
+        public Transform rtHand;
+        public Transform skinnedSpine1;
+        public Transform neck1;
+        public Transform neck2;
+        public Transform neckTop;
+        public Transform spine1;
+        public Transform spine2;
+        public Transform spineTop;
+        public Transform neck;
+        public Transform head;
+        public Transform eyeL;
+        public Transform eyeR;
+        public int lfShoulderMuscleIndex;
+        public int rtShoulderMuscleIndex;
+    }
+
+    [System.Serializable]
+    public class SubBehaviourFaceanim
+    {
+        public byte faceAnimEnabled;
+        public Transform mouthTran;
+        public FaceEvent[] greetings;
+        public FaceEvent[] agros;
+        public FaceEvent[] unAgros;
+        public FaceEvent[] deaths;
+        public FaceEvent[] painSmalls;
+        public FaceEvent[] painBigs;
+        public FaceEvent[] attack1s;
+        public FaceEvent[] efforts;
+        public FaceEvent[] eventLines;
+    }
+
+    [System.Serializable]
+    public class FaceEvent
+    {
+        public UnityEngine.AudioClip clip;
+        public int triggerIndex;
+        public int animIndex;
+    }
+
+    [System.Serializable]
+    public class SubBehaviourHandPose
+    {
+        public float updateFps;
+        public HandPoseData OpenHand;
+        public HandPoseData Fist;
+        public HandPoseData Pistol;
+        public HandPoseData PistolOffhand;
+        public Transform[] leftHandRefs;
+        public Transform[] rightHandRefs;
+    }
+
+    [System.Serializable]
+    public class TargetableAnimatorEvent
+    {
+        public string animationState;
+        public float crossfadeTime;
+        public int layer;
+        public float clipLength;
+        public UnityEngine.Vector3 localContactPoint;
+        public float startIkNormalTime;
+        public float contactPointNormalTime;
+        public int targetedLimb;
+        public float limbStrengthMultiplier;
+        public float spineStrengthMultiplier;
+    }
+
+    [System.Serializable]
+    public class Spawnable
+    {
+        public SLZ.Marrow.Warehouse.SpawnableCrateReference crateRef;
+        public SpawnPolicyData policyData;
+    }
+
+    [System.Serializable]
+    public class AnimatorEvent
+    {
+        public string animationState;
+        public float crossfadeTime;
+        public int layer;
+        public byte resetNormalizedTime;
+    }
+
+    public class BehaviourPowerLegs : SLZ.Marrow.PuppetMasta.BehaviourBaseNav
+    {
+        public PuppetMaster puppetMaster;
+        public byte deactivated;
+        public Poolee _poolee;
+        public Animator contactAnimController;
+        public string contactAnimName;
+        public int contactBoneRef;
+        public int contactPointFrame;
+        public BaseEnemyConfig overrideConfig;
+        public BaseEnemyConfig prefabConfig;
+        public string behaviourConfigSuffix;
+        public string configSavePath;
+        public float restingRange;
+        public byte freezeWhileResting;
+        public byte homeIsPost;
+        public float activeRange;
+        public float roamSpeed;
+        public UnityEngine.Vector2 roamRange;
+        public UnityEngine.Vector3 roamRange3D;
+        public float roamAngSpeed;
+        public float roamFrequency;
+        public byte roamWanders;
+        public UnityEngine.Vector3[] waypoints;
+        public GameObject[] waypointObjects;
+        public int currWaypoint;
+        public RoamArea roamArea;
+        public UnityEngine.Vector3[] usedWPList;
+        public UnityEngine.Vector3[] failedWPList;
+        public float wpMinTime;
+        public UnityEngine.Vector3 ranRoamTarget;
+        public UnityEngine.Vector3 roamOffset;
+        public float roamWaitDuration;
+        public int roamMode;
+        public int waypointEvalMode;
+        public float investigateRange;
+        public int agroOnNpcType;
+        public float breakAgroTargetDistance;
+        public float breakAgroHomeDistance;
+        public float agroedSpeed;
+        public float agroedAngSpeed;
+        public UnityEngine.LayerMask meleeAttackMask;
+        public byte enableThrowAttack;
+        public byte throwAttackUsesGravity;
+        public byte forceAgentPath;
+        public float fwdDotThresh;
+        public float throwMaxRange;
+        public float throwMinRange;
+        public float throwCooldown;
+        public float throwVelocity;
+        public float gunRange;
+        public float gunCooldown;
+        public float accuracy;
+        public float reloadTime;
+        public int clipSize;
+        public int burstSize;
+        public float desiredGunDistance;
+        public UnityEngine.Color baseColor;
+        public UnityEngine.Color agroColor;
+        public Renderer[] emissionRenderers;
+        public byte isSoundAggroWhenInSecondaryZone;
+        public int mentalState;
+        public byte applyCachedMental;
+        public int cachedMentalState;
+        public int locoState;
+        public float aiTickFreq;
+        public Transform eyeTran;
+        public SubBehaviourSensors sensors;
+        public SubBehaviourSfx sfx;
+        public SubBehaviourHealth health;
+        public UnityEngine.Vector3 homePosition;
+        public UnityEngine.Events.UnityEvent OnDeath;
+        public UnityEngine.Events.UnityEvent OnDeathStart;
+        public InteractableHostManager hostManager;
+        public int handCount;
+        public SubBehaviourIk ik;
+        public SubBehaviourFaceanim faceAnim;
+        public SubBehaviourHandPose handPoser;
+        public float scaleFactor;
+        public GameObject throwVfx;
+        public byte crumbleDeath;
+        public int combatProficiency;
+        public int agroState;
+        public float meleeRange;
+        public float desiredMeleeDistance;
+        public float meleeCooldown;
+        public TargetableAnimatorEvent WildPunchBigL;
+        public TargetableAnimatorEvent WildPunchBigR;
+        public TargetableAnimatorEvent WildPunchJabL;
+        public TargetableAnimatorEvent WildPunchJabR;
+        public TargetableAnimatorEvent Fist1PunchL;
+        public TargetableAnimatorEvent Fist1PunchR;
+        public TargetableAnimatorEvent Fist1MidUppercutL;
+        public TargetableAnimatorEvent Fist1MidUppercutR;
+        public TargetableAnimatorEvent Block;
+        public Spawnable spawnable;
+        public float throwSpeed;
+        public float throwGap;
+        public EnemyPoseData standingIdle;
+        public float restingActivateRange;
+        public float jumpCooldown;
+        public float jumpCharge;
+        public byte getUpWhileResting;
+        public AnimatorEvent[] onGetUpProne;
+        public AnimatorEvent[] onGetUpSupine;
+        public GameObject IKPunchGameObject;
+        public byte isOverrideOn;
+        public LocoController aiLocoController;
+        public byte useAiLocoController;
+        public int engagedMode;
+        public float desiredDistance;
+        public byte followPlayer;
+        public float engagedSpeed;
+        public float breakEngagedTargetDistance;
+        public float breakEngagedHomeDistance;
+        public float mirrorSkill;
+    }
+}

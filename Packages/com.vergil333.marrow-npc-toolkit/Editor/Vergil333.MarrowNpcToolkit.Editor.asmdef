@@ -1,0 +1,21 @@
+{
+  "name": "Vergil333.MarrowNpcToolkit.Editor",
+  "rootNamespace": "Vergil333.MarrowNpcToolkit.Editor",
+  "references": [
+    "Vergil333.MarrowNpcToolkit",
+    "SLZ.Marrow",
+    "SLZ.Marrow.Editor",
+    "Unity.Addressables.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

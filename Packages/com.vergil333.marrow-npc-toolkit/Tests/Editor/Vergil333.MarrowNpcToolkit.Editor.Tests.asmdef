@@ -1,0 +1,26 @@
+{
+  "name": "Vergil333.MarrowNpcToolkit.Editor.Tests",
+  "rootNamespace": "Vergil333.MarrowNpcToolkit.Tests",
+  "references": [
+    "Vergil333.MarrowNpcToolkit",
+    "Vergil333.MarrowNpcToolkit.Editor",
+    "SLZ.Marrow",
+    "UnityEngine.TestRunner",
+    "UnityEditor.TestRunner"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

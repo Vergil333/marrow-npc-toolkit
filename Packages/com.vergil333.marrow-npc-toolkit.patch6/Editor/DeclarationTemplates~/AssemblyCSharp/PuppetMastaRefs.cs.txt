@@ -1,0 +1,20 @@
+// Reference types only — never authored, only pointed at.
+//
+// BehaviourPowerLegs' typetree references these three by name. A typetree
+// records type names but never namespaces, so they come out bare; declaring
+// them in PuppetMasta is what makes the generated stub resolve. We always leave
+// the fields null, so nothing depends on these matching the game's own
+// namespaces — only on the field existing so the struct around it is not
+// missing from our serialized data.
+
+namespace PuppetMasta
+{
+    /// RootMotion FinalIK's IK base, referenced by SubBehaviourIk's solver lists.
+    public class IK : UnityEngine.MonoBehaviour { }
+
+    /// The volume an NPC roams within. Null here — this character does not roam.
+    public class RoamArea : UnityEngine.MonoBehaviour { }
+
+    /// Assembly-CSharp locomotion controller, referenced as aiLocoController.
+    public class LocoController : UnityEngine.MonoBehaviour { }
+}

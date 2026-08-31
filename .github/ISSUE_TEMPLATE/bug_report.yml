@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible toolkit, provider, packing, or runtime issue.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not upload proprietary game or character files.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Toolkit, provider, Unity, Marrow SDK, BONELAB patch, and platform.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: boundary
+    attributes:
+      label: Where was it observed?
+      options:
+        - Unity authoring or validation
+        - Pallet packing
+        - Quest BONELAB runtime
+        - Windows BONELAB runtime
+    validations:
+      required: true
