@@ -70,8 +70,6 @@ Still required before publishing the GitHub preview:
 
 - A cold Quest spawn, movement, damage, pooling, interaction, jaw, gaze, audio,
   and Secondary Motion test of the installed exact Android output.
-- Enabling GitHub Private Vulnerability Reporting after the remote repository
-  exists.
 
 Deferred claim gates are intentionally documented as pending: a freely
 distributable non-Eve Humanoid and clean Windows BONELAB runtime verification.

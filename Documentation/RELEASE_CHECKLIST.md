@@ -59,20 +59,20 @@ as pending and no Windows runtime claim is made.
 - [x] Create both deterministic `.tgz` artifacts.
 - [x] Generate SHA-256 checksums.
 - [x] Verify installation from each attached artifact.
-- [ ] Commit the final validation evidence and verify the tagged commit is
+- [x] Commit the final validation evidence and verify the tagged commit is
       reachable from `main`.
 - [x] Create the GitHub repository, push `main`, and enable Private
       Vulnerability Reporting.
-- [ ] Create an immutable version tag.
-- [ ] Verify the tag points at the exact tested commit and that the core and
+- [x] Create an immutable version tag.
+- [x] Verify the tag points at the exact tested commit and that the core and
       provider versions match it.
-- [ ] Let the tag workflow create a draft prerelease, then verify its archive
+- [x] Let the tag workflow create a draft prerelease, then verify its archive
       hashes match the locally tested hashes.
-- [ ] Verify both version-pinned Git URLs after the tag exists.
+- [x] Verify both version-pinned Git URLs after the tag exists.
 - [x] Add release notes with the current exact Quest status, Eve-only proof scope,
       hostile-pursuit and gaze limitations, Windows status, required SDK/game
       versions, and both SHA-256 values.
-- [ ] Mark pre-1.0 releases as GitHub pre-releases.
-- [ ] Keep the GitHub release in Draft until required legal and advertised
+- [x] Mark pre-1.0 releases as GitHub pre-releases.
+- [x] Keep the GitHub release in Draft until required legal and advertised
       runtime checks are accepted.
 - [x] Protect `v*` tags from update or deletion before publishing the draft.
