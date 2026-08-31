@@ -61,7 +61,7 @@ as pending and no Windows runtime claim is made.
 - [x] Verify installation from each attached artifact.
 - [ ] Commit the final validation evidence and verify the tagged commit is
       reachable from `main`.
-- [ ] Create the GitHub repository, push `main`, and enable Private
+- [x] Create the GitHub repository, push `main`, and enable Private
       Vulnerability Reporting.
 - [ ] Create an immutable version tag.
 - [ ] Verify the tag points at the exact tested commit and that the core and
@@ -75,4 +75,4 @@ as pending and no Windows runtime claim is made.
 - [ ] Mark pre-1.0 releases as GitHub pre-releases.
 - [ ] Keep the GitHub release in Draft until required legal and advertised
       runtime checks are accepted.
-- [ ] Protect `v*` tags from update or deletion before publishing the draft.
+- [x] Protect `v*` tags from update or deletion before publishing the draft.
