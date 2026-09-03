@@ -85,8 +85,10 @@ footstep references as an editable starting point. It does not copy or alter an
 `AudioClip` or `AudioVarianceData` asset. The suggested conversion is visible:
 small/big pain become the matching reactions, dying plus dead become Death,
 big effort becomes Jump and the fallback Small Effort, recovery becomes Medium
-Effort, high fall becomes Large Effort and Spine Impact, and Avatar walk/jog
-become NPC walk/run footsteps.
+Effort, high fall becomes Large Effort, and Avatar walk/jog become NPC walk/run
+footsteps. Physical Impacts are separate, optional NPC contact sounds. Because
+they can also play from a dead ragdoll, use non-vocal body, clothing, or armor
+sounds unless post-death vocals are intentional.
 
 NPC Audio starts **Off**. Choose **Use Audio Profile** when the generated NPC
 should use the assigned category map. Small Pain, Big Pain, and Death each need
@@ -103,10 +105,10 @@ the definition, assigns it, and reuses supported Avatar clip references when
 available. It does not enable NPC Audio by itself.
 
 Use **Re-read Supported Audio from Avatar** after changing the Avatar's audio.
-It replaces Small Pain, Big Pain, Death, Jump, Small/Medium/Large Effort, Spine
-Impact, and Walk/Run with the Avatar's current references. Other custom groups
-stay unchanged. The profile always stores links to existing clips; it does not
-copy or edit the audio files.
+It replaces Small Pain, Big Pain, Death, Jump, Small/Medium/Large Effort, and
+Walk/Run with the Avatar's current references. Physical Impacts and other custom
+groups stay unchanged. The profile always stores links to existing clips; it
+does not copy or edit the audio files.
 
 Later collider, joint, muscle, grip, eye, jaw, audio, and foot tuning belongs in
 the profiles, not in a generated prefab.

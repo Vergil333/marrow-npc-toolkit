@@ -156,6 +156,9 @@ namespace Vergil333.MarrowNpcToolkit.Tests
             AudioClip dead = AudioClip.Create("dead", 32, 1, 16000, false);
             AudioClip walk = AudioClip.Create("walk", 32, 1, 16000, false);
             AudioClip run = AudioClip.Create("run", 32, 1, 16000, false);
+            AudioClip highFall = AudioClip.Create("high-fall", 32, 1, 16000, false);
+            AudioClip explicitImpact = AudioClip.Create(
+                "explicit-impact", 32, 1, 16000, false);
             Object[] variances =
             {
                 CreateVariance(varianceType, smallPain),
@@ -163,6 +166,7 @@ namespace Vergil333.MarrowNpcToolkit.Tests
                 CreateVariance(varianceType, dead),
                 CreateVariance(varianceType, walk),
                 CreateVariance(varianceType, run),
+                CreateVariance(varianceType, highFall),
             };
             try
             {
@@ -172,6 +176,7 @@ namespace Vergil333.MarrowNpcToolkit.Tests
                 AssignObject(serialized, "dead", variances[2]);
                 AssignObject(serialized, "footstepsWalk", variances[3]);
                 AssignObject(serialized, "footstepsJog", variances[4]);
+                AssignObject(serialized, "highFallOntoFeet", variances[5]);
                 serialized.ApplyModifiedPropertiesWithoutUndo();
                 profile.SetProvenance(
                     "English",
@@ -187,11 +192,24 @@ namespace Vergil333.MarrowNpcToolkit.Tests
                 Assert.That(profile.Death, Is.EqualTo(new[] { dying, dead }));
                 Assert.That(profile.WalkConcrete, Is.EqualTo(new[] { walk }));
                 Assert.That(profile.RunConcrete, Is.EqualTo(new[] { run }));
+                Assert.That(profile.LargeEffort, Is.EqualTo(new[] { highFall }));
+                Assert.That(profile.ImpactSpine, Is.Empty);
                 Assert.That(profile.Source, Is.EqualTo("Creator-owned source"));
                 Assert.That(profile.LicenseOrPermission,
                     Is.EqualTo("Redistribution permitted"));
                 Assert.That(profile.Notes, Does.StartWith("Keep this note."));
                 Assert.That(profile.Notes, Does.Contain("No audio asset was copied"));
+
+                // Physical-impact clips are explicitly authored NPC audio. An
+                // Avatar refresh must not replace a deliberate custom choice.
+                profile.SetClips(
+                    NpcAudioEvent.ImpactSpine, new[] { explicitImpact });
+                NpcAudioProfileImportService.CaptureAvatarReferences(
+                    avatarObject, profile);
+
+                Assert.That(profile.LargeEffort, Is.EqualTo(new[] { highFall }));
+                Assert.That(
+                    profile.ImpactSpine, Is.EqualTo(new[] { explicitImpact }));
             }
             finally
             {
@@ -202,6 +220,8 @@ namespace Vergil333.MarrowNpcToolkit.Tests
                 Object.DestroyImmediate(dead);
                 Object.DestroyImmediate(walk);
                 Object.DestroyImmediate(run);
+                Object.DestroyImmediate(highFall);
+                Object.DestroyImmediate(explicitImpact);
                 Object.DestroyImmediate(profile);
                 Object.DestroyImmediate(avatarObject);
             }

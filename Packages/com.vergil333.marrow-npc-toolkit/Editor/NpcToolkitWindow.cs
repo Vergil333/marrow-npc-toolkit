@@ -1534,7 +1534,7 @@ namespace Vergil333.MarrowNpcToolkit.Editor
                 AssetDatabase.SaveAssets();
                 ClearReadiness();
                 SetOperation(
-                    "Re-read Small Pain, Big Pain, Death, Jump, Small/Medium/Large Effort, Spine Impact, and Walk/Run from the source Avatar. Other custom categories were preserved, and no audio file was copied or edited.",
+                    "Re-read Small Pain, Big Pain, Death, Jump, Small/Medium/Large Effort, and Walk/Run from the source Avatar. Physical Impacts and other custom categories were preserved, and no audio file was copied or edited.",
                     MessageType.Info);
             }
             catch (Exception exception)

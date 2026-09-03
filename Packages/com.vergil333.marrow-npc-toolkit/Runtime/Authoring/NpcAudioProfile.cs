@@ -57,8 +57,11 @@ namespace Vergil333.MarrowNpcToolkit.Authoring
         [SerializeField] private AudioClip[] attack2 = Array.Empty<AudioClip>();
 
         [Header("Physical Impacts")]
+        [Tooltip("Contact-positioned head-impact sounds. This channel can play after death; use non-vocal impact audio unless corpse vocals are intentional.")]
         [SerializeField] private AudioClip[] impactHead = Array.Empty<AudioClip>();
+        [Tooltip("Contact-positioned spine and torso-impact sounds. This channel can play after death; use non-vocal impact audio unless corpse vocals are intentional.")]
         [SerializeField] private AudioClip[] impactSpine = Array.Empty<AudioClip>();
+        [Tooltip("Contact-positioned limb-impact sounds. This channel can play after death; use non-vocal impact audio unless corpse vocals are intentional.")]
         [SerializeField] private AudioClip[] impactLimb = Array.Empty<AudioClip>();
 
         [Header("Optional Loops")]

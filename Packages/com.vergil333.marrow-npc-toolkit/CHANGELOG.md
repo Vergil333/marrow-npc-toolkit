@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Stopped importing an Avatar's hard-landing vocal into the native NPC spine
+  impact channel, which BONELAB can play from corpse collisions. Refreshing
+  Avatar audio now leaves all explicitly authored physical-impact groups
+  unchanged.
+
 ## 0.5.0-preview.1
 
 - Prepared the first public preview package for version-pinned Git and tarball

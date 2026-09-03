@@ -45,12 +45,11 @@ namespace Vergil333.MarrowNpcToolkit.Editor.Authoring
             destination.SetClips(
                 NpcAudioEvent.SmallEffort,
                 smallEffort.Length > 0 ? smallEffort : jump);
-            // These two mappings preserve the validated Patch 6 authoring contract.
-            // They remain visible and editable in the profile rather than being
-            // hidden inside a native provider.
             destination.SetClips(NpcAudioEvent.MediumEffort, recovery);
             destination.SetClips(NpcAudioEvent.LargeEffort, highFall);
-            destination.SetClips(NpcAudioEvent.ImpactSpine, highFall);
+            // Avatar high-fall clips are living landing vocals. Physical-impact
+            // channels can remain active on dead ragdolls and have no equivalent
+            // Avatar category, so refreshing Avatar audio must not alter them.
             float footstepVolume = destination.FootstepVolumeMultiplier;
             destination.SetFootsteps(
                 ReadVariance(serialized, "footstepsWalk"),
